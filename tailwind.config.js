@@ -4,7 +4,12 @@ module.exports = {
     "./src/**/*.{html,ts}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'montserrat': ['Montserrat', 'sans-serif'],
+        'fira-sans': ['Fira Sans', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
