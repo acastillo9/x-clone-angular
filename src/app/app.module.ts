@@ -6,12 +6,22 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TimelineComponent } from './timeline/timeline.component';
+import { TweetsComponent } from './tweets/tweets.component';
+import { TweetComponent } from './tweets/tweet/tweet.component';
+import { TweetButtonsComponent } from './tweets/tweet/tweet-buttons/tweet-buttons.component';
+import { TweetButtonComponent } from './tweets/tweet/tweet-buttons/tweet-button/tweet-button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    MenuComponent
+    MenuComponent,
+    TimelineComponent,
+    TweetsComponent,
+    TweetComponent,
+    TweetButtonsComponent,
+    TweetButtonComponent
   ],
   imports: [
     BrowserModule,

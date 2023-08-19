@@ -1,0 +1,10 @@
+<button 
+    class="text-gray-x flex items-center hover:text-blue-x-3 gap-1 group" 
+    [ngClass]="{'hover:text-green-x': color === 'green', 'hover:text-red-x': color === 'red'}">
+    <span 
+        class="w-9 h-9 rounded-full group-hover:bg-blue-x-3/20 flex items-center justify-center"
+        [ngClass]="{'group-hover:bg-green-x/20': color === 'green', 'group-hover:bg-red-x/20': color === 'red'}">
+        <fa-icon class="text-base" [icon]="icon!"></fa-icon>
+    </span>
+    {{ value }}
+</button>
