@@ -1,12 +1,12 @@
 <article class="flex py-3 px-4 cursor-pointer border-b border-solid border-white/30 gap-4">
     <div>
-        <img class="rounded-full max-w-none" src="https://randomuser.me/api/portraits/women/1.jpg" alt="Luisa Castro" width="40">
+        <img class="rounded-full max-w-none" [src]="tweet?.user?.profileImage" [alt]="tweet?.user?.name" width="40">
     </div>
     <div>
         <div class="mb-2">
-            <a class="font-bold mr-2 hover:underline" href="#">Luisa</a><span class="text-gray-x"><span>@luisa.castro</span> · <a class="text-gray-x hover:underline" href="#">13h</a></span>
+            <a class="font-bold mr-2 hover:underline" href="#">{{ tweet?.user?.name }}</a><span class="text-gray-x"><span>{{ tweet?.user?.username }}</span> · <a class="text-gray-x hover:underline" href="#">{{ tweet?.date | date }}</a></span>
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam illo natus modi facilis vel itaque sequi porro tenetur quidem ipsam commodi, quasi asperiores quibusdam quis mollitia, velit ratione facere assumenda?</p>
-        <app-tweet-buttons />
+        <p class="mb-4">{{ tweet?.text }}</p>
+        <app-tweet-buttons [replays]="tweet?.replaysCount ?? 0" [retweets]="tweet?.retweetsCount ?? 0" [likes]="tweet?.likesCount ?? 0" [views]="tweet?.viewsCount ?? 0" />
     </div>
 </article>

@@ -11,6 +11,7 @@ import { TweetsComponent } from './tweets/tweets.component';
 import { TweetComponent } from './tweets/tweet/tweet.component';
 import { TweetButtonsComponent } from './tweets/tweet/tweet-buttons/tweet-buttons.component';
 import { TweetButtonComponent } from './tweets/tweet/tweet-buttons/tweet-button/tweet-button.component';
+import { TweetCounterPipe } from './shared/tweet-counter.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { TweetButtonComponent } from './tweets/tweet/tweet-buttons/tweet-button/
     TweetsComponent,
     TweetComponent,
     TweetButtonsComponent,
-    TweetButtonComponent
+    TweetButtonComponent,
+    TweetCounterPipe
   ],
   imports: [
     BrowserModule,
