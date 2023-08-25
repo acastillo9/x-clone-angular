@@ -99,6 +99,6 @@ export class TweetsService {
   // }
 
   getTweets(): Observable<Tweet[]> {
-    return this.httpClient.get<Tweet[]>('http://localhost:4200/assets/tweets.json');
+    return this.httpClient.get<Tweet[]>('http://localhost:3000/tweets');
   }
 }
