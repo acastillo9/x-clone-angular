@@ -12,6 +12,8 @@ import { TweetComponent } from './tweets/tweet/tweet.component';
 import { TweetButtonsComponent } from './tweets/tweet/tweet-buttons/tweet-buttons.component';
 import { TweetButtonComponent } from './tweets/tweet/tweet-buttons/tweet-button/tweet-button.component';
 import { TweetCounterPipe } from './shared/tweet-counter.pipe';
+import { HttpClientModule } from '@angular/common/http';
+import { MenuResponsiveComponent } from './menu-responsive/menu-responsive.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +25,14 @@ import { TweetCounterPipe } from './shared/tweet-counter.pipe';
     TweetComponent,
     TweetButtonsComponent,
     TweetButtonComponent,
-    TweetCounterPipe
+    TweetCounterPipe,
+    MenuResponsiveComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

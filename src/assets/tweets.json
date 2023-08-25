@@ -1,0 +1,146 @@
+[
+    {
+        "id": "1",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam illo natus modi facilis vel itaque sequi porro tenetur quidem ipsam commodi, quasi asperiores quibusdam quis mollitia, velit ratione facere assumenda?",
+        "date": "2023-08-23T23:37:32.322Z",
+        "user": {
+            "id": "1",
+            "name": "Laura",
+            "username": "@laura.alvarez",
+            "email": "laura.alvarez@mail.com",
+            "profileImage": "https://randomuser.me/api/portraits/women/1.jpg"
+        },
+        "replaysCount": 100,
+        "retweetsCount": 200,
+        "likesCount": 230,
+        "viewsCount": 500
+    },
+    {
+        "id": "2",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id accusantium molestias quas aliquam pariatur officia sequi itaque, consequatur possimus eum ducimus modi necessitatibus maiores doloribus quam maxime molestiae earum animi.",
+        "date": "2023-08-22T20:22:31.322Z",
+        "user": {
+            "id": "1",
+            "name": "Luisa",
+            "username": "@luisa.castro",
+            "email": "luisa.castro@mail.com",
+            "profileImage": "https://randomuser.me/api/portraits/women/2.jpg"
+        },
+        "replaysCount": 100,
+        "retweetsCount": 200,
+        "likesCount": 450,
+        "viewsCount": 100
+    },
+    {
+        "id": "3",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam provident ipsam nostrum praesentium harum odit nam placeat, consequatur itaque, rem quas similique perspiciatis! Provident minima dignissimos nostrum repellendus a error.",
+        "date": "2023-07-12T10:35:20.322Z",
+        "user": {
+            "id": "1",
+            "name": "Ricardo",
+            "username": "@ricardo.munoz",
+            "email": "ricardo.munoz@mail.com",
+            "profileImage": "https://randomuser.me/api/portraits/men/1.jpg"
+        },
+        "replaysCount": 500,
+        "retweetsCount": 300,
+        "likesCount": 130,
+        "viewsCount": 400
+    },
+    {
+        "id": "1",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam illo natus modi facilis vel itaque sequi porro tenetur quidem ipsam commodi, quasi asperiores quibusdam quis mollitia, velit ratione facere assumenda?",
+        "date": "2023-08-23T23:37:32.322Z",
+        "user": {
+            "id": "1",
+            "name": "Laura",
+            "username": "@laura.alvarez",
+            "email": "laura.alvarez@mail.com",
+            "profileImage": "https://randomuser.me/api/portraits/women/1.jpg"
+        },
+        "replaysCount": 100,
+        "retweetsCount": 200,
+        "likesCount": 230,
+        "viewsCount": 500
+    },
+    {
+        "id": "2",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id accusantium molestias quas aliquam pariatur officia sequi itaque, consequatur possimus eum ducimus modi necessitatibus maiores doloribus quam maxime molestiae earum animi.",
+        "date": "2023-08-22T20:22:31.322Z",
+        "user": {
+            "id": "1",
+            "name": "Luisa",
+            "username": "@luisa.castro",
+            "email": "luisa.castro@mail.com",
+            "profileImage": "https://randomuser.me/api/portraits/women/2.jpg"
+        },
+        "replaysCount": 100,
+        "retweetsCount": 200,
+        "likesCount": 450,
+        "viewsCount": 100
+    },
+    {
+        "id": "3",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam provident ipsam nostrum praesentium harum odit nam placeat, consequatur itaque, rem quas similique perspiciatis! Provident minima dignissimos nostrum repellendus a error.",
+        "date": "2023-07-12T10:35:20.322Z",
+        "user": {
+            "id": "1",
+            "name": "Ricardo",
+            "username": "@ricardo.munoz",
+            "email": "ricardo.munoz@mail.com",
+            "profileImage": "https://randomuser.me/api/portraits/men/1.jpg"
+        },
+        "replaysCount": 500,
+        "retweetsCount": 300,
+        "likesCount": 130,
+        "viewsCount": 400
+    },
+    {
+        "id": "1",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam illo natus modi facilis vel itaque sequi porro tenetur quidem ipsam commodi, quasi asperiores quibusdam quis mollitia, velit ratione facere assumenda?",
+        "date": "2023-08-23T23:37:32.322Z",
+        "user": {
+            "id": "1",
+            "name": "Laura",
+            "username": "@laura.alvarez",
+            "email": "laura.alvarez@mail.com",
+            "profileImage": "https://randomuser.me/api/portraits/women/1.jpg"
+        },
+        "replaysCount": 100,
+        "retweetsCount": 200,
+        "likesCount": 230,
+        "viewsCount": 500
+    },
+    {
+        "id": "2",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id accusantium molestias quas aliquam pariatur officia sequi itaque, consequatur possimus eum ducimus modi necessitatibus maiores doloribus quam maxime molestiae earum animi.",
+        "date": "2023-08-22T20:22:31.322Z",
+        "user": {
+            "id": "1",
+            "name": "Luisa",
+            "username": "@luisa.castro",
+            "email": "luisa.castro@mail.com",
+            "profileImage": "https://randomuser.me/api/portraits/women/2.jpg"
+        },
+        "replaysCount": 100,
+        "retweetsCount": 200,
+        "likesCount": 450,
+        "viewsCount": 100
+    },
+    {
+        "id": "3",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam provident ipsam nostrum praesentium harum odit nam placeat, consequatur itaque, rem quas similique perspiciatis! Provident minima dignissimos nostrum repellendus a error.",
+        "date": "2023-07-12T10:35:20.322Z",
+        "user": {
+            "id": "1",
+            "name": "Ricardo",
+            "username": "@ricardo.munoz",
+            "email": "ricardo.munoz@mail.com",
+            "profileImage": "https://randomuser.me/api/portraits/men/1.jpg"
+        },
+        "replaysCount": 500,
+        "retweetsCount": 300,
+        "likesCount": 130,
+        "viewsCount": 400
+    }
+]
