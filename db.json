@@ -1,11 +1,11 @@
 {
   "tweets": [
     {
-      "id": "1",
+      "id": 1,
       "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam illo natus modi facilis vel itaque sequi porro tenetur quidem ipsam commodi, quasi asperiores quibusdam quis mollitia, velit ratione facere assumenda?",
       "date": "2023-08-23T23:37:32.322Z",
       "user": {
-        "id": "1",
+        "id": 1,
         "name": "Laura",
         "username": "@laura.alvarez",
         "email": "laura.alvarez@mail.com",
@@ -17,11 +17,11 @@
       "viewsCount": 500
     },
     {
-      "id": "2",
+      "id": 2,
       "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id accusantium molestias quas aliquam pariatur officia sequi itaque, consequatur possimus eum ducimus modi necessitatibus maiores doloribus quam maxime molestiae earum animi.",
       "date": "2023-08-22T20:22:31.322Z",
       "user": {
-        "id": "2",
+        "id": 2,
         "name": "Luisa",
         "username": "@luisa.castro",
         "email": "luisa.castro@mail.com",
@@ -33,11 +33,11 @@
       "viewsCount": 100
     },
     {
-      "id": "3",
+      "id": 3,
       "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam provident ipsam nostrum praesentium harum odit nam placeat, consequatur itaque, rem quas similique perspiciatis! Provident minima dignissimos nostrum repellendus a error.",
       "date": "2023-07-12T10:35:20.322Z",
       "user": {
-        "id": "3",
+        "id": 3,
         "name": "Ricardo",
         "username": "@ricardo.munoz",
         "email": "ricardo.munoz@mail.com",
@@ -49,11 +49,11 @@
       "viewsCount": 400
     },
     {
-      "id": "4",
+      "id": 4,
       "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam voluptate id doloribus soluta numquam quos modi temporibus, laudantium commodi voluptatem odio amet exercitationem ipsa aperiam, aliquam assumenda distinctio minima inventore.",
       "date": "2023-08-25T10:35:20.322Z",
       "user": {
-        "id": "4",
+        "id": 4,
         "name": "Juan",
         "username": "@juan.munoz",
         "email": "juan.munoz@mail.com",
@@ -67,11 +67,11 @@
   ],
   "users": [
     {
-      "name": "Andrés Castillo",
-      "username": "",
+      "name": "andres",
+      "username": "acastillo",
       "email": "acastillo119@gmail.com",
       "password": "testing",
-      "dateBirth": "1982-10-18",
+      "dateBirth": "1990-06-07",
       "id": 1
     }
   ]

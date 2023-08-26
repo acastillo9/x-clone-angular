@@ -11,19 +11,17 @@ import { User } from '../user.model';
 export class RegisterComponent {
 
   registerForm = new FormGroup({
-    name: new FormControl(''),
-    username: new FormControl(''),
-    email: new FormControl(''),
-    password: new FormControl(''),
-    dateBirth: new FormControl<Date>(new Date()),
+    name: new FormControl('', { nonNullable: true }),
+    username: new FormControl('', { nonNullable: true }),
+    email: new FormControl('', { nonNullable: true }),
+    password: new FormControl('', { nonNullable: true }),
+    dateBirth: new FormControl<Date>(new Date(), { nonNullable: true }),
   });
 
   constructor(private usersService: UsersService) {}
 
   signUp() {
-    console.log(this.registerForm.value);
-
-    this.usersService.save(this.registerForm.value as User).subscribe((newUser) => {
+    this.usersService.save(this.registerForm.getRawValue()).subscribe((newUser) => {
       console.log('new user', newUser);
     })
   }
