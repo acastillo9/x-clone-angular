@@ -1,0 +1,28 @@
+<div class="w-full h-screen flex justify-center items-center">
+    <section class="form-wrapper max-w-full p-10 border border-white/40 rounded-xl">
+        <h2 class="text-3xl font-bold mb-4">Create your account</h2>
+        <form class="flex flex-col gap-4" [formGroup]="registerForm" (ngSubmit)="signUp()">
+            <label for="name" class="block">
+                <span>Name</span>
+                <input type="text" class="text-black mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="name" id="name" formControlName="name">
+            </label>
+        
+            <label for="email">
+                <span>Email</span>
+                <input type="text" class="text-black mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="email" id="email" formControlName="email">
+            </label>
+        
+            <label for="password">
+                <span>Password</span>   
+                <input type="password" class="text-black mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="password" id="password" formControlName="password">
+            </label>
+        
+            <label for="dateBirth">
+                <span>Date of Birth</span>
+                <input type="date" class="text-black mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="dateBirth" id="dateBirth" formControlName="dateBirth">
+            </label>
+
+            <button class="mt-4 text-xl font-bold py-4 px-5 cursor-pointer rounded-full bg-blue-x hover:bg-blue-x-2 w-full" type="submit">Sign Up</button>
+        </form>
+    </section>
+</div>

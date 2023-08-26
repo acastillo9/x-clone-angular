@@ -1,7 +1,9 @@
 export interface User {
-    id: string;
+    id?: string;
     name: string;
     username: string;
+    password?: string;
     email: string;
-    profileImage: string;
+    dateBirth: Date;
+    profileImage?: string;
 }

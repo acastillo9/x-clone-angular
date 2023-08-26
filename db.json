@@ -64,5 +64,15 @@
       "likesCount": 13,
       "viewsCount": 50
     }
+  ],
+  "users": [
+    {
+      "name": "Andrés Castillo",
+      "username": "",
+      "email": "acastillo119@gmail.com",
+      "password": "testing",
+      "dateBirth": "1982-10-18",
+      "id": 1
+    }
   ]
 }
