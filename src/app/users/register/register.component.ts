@@ -14,7 +14,7 @@ export class RegisterComponent {
     username: new FormControl('', { nonNullable: true }),
     email: new FormControl('', { nonNullable: true }),
     password: new FormControl('', { nonNullable: true }),
-    dateBirth: new FormControl<Date>(new Date(), { nonNullable: true }),
+    dateBirth: new FormControl(new Date(), { nonNullable: true }),
   });
 
   constructor(private usersService: UsersService) {}
