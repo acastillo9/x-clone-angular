@@ -1,0 +1,21 @@
+<div class="w-full h-screen flex justify-center items-center">
+    <section class="form-wrapper max-w-full p-10 border border-white/40 rounded-xl">
+        <h2 class="text-3xl font-bold mb-4">Login with your account</h2>
+        <form class="flex flex-col gap-4" #loginForm="ngForm" (ngSubmit)="login()">
+            <label for="email" class="block">
+                <span>Email</span>
+                <input type="email" class="text-black mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" [ngClass]="{'border-red-600': email.invalid && !email.pristine }" name="email" id="email" required [(ngModel)]="model.email" #email="ngModel">
+                <div [hidden]="email.valid || email.pristine" class="text-red-600 mt-1">
+                    Email is required
+                </div>
+            </label>
+        
+            <label for="password">
+                <span>Password</span>
+                <input type="password" class="text-black mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="password" id="password" required [(ngModel)]="model.password">
+            </label>
+
+            <button class="mt-4 text-xl font-bold py-4 px-5 cursor-pointer rounded-full bg-blue-x hover:bg-blue-x-2 w-full disabled:cursor-not-allowed disabled:bg-gray-500" type="submit">Log In</button>
+        </form>
+    </section>
+</div>

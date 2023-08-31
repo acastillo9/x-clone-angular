@@ -73,6 +73,14 @@
       "password": "testing",
       "dateBirth": "1990-06-07",
       "id": 1
+    },
+    {
+      "name": "Juan",
+      "username": "@juan.giraldo",
+      "email": "juan.giraldo@example.com",
+      "password": "123456",
+      "dateBirth": "1992-10-22",
+      "id": 2
     }
   ]
 }
