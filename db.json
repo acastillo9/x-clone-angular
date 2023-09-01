@@ -67,12 +67,13 @@
   ],
   "users": [
     {
-      "name": "andres",
+      "name": "Andres Castillo",
       "username": "acastillo",
       "email": "acastillo119@gmail.com",
       "password": "testing",
       "dateBirth": "1990-06-07",
-      "id": 1
+      "id": 1,
+      "profileImage": "https://randomuser.me/api/portraits/men/3.jpg"
     },
     {
       "name": "Juan",

@@ -14,11 +14,10 @@ export class LoginComponent {
   constructor(private authService: AuthService, private router: Router) {}
 
   login() {
-    this.authService.login(this.model.email, this.model.password).subscribe((isLoggedIn) => {
-      console.log(isLoggedIn);
-      this.authService.isLoggedIn = isLoggedIn;
-      localStorage.setItem('isLoggedIn', JSON.stringify(isLoggedIn));
-      if (isLoggedIn) {
+    this.authService.login(this.model.email, this.model.password).subscribe((userId) => {
+      this.authService.userId = userId;
+      localStorage.setItem('userId', JSON.stringify(userId));
+      if (userId) {
         this.router.navigateByUrl('/');
       }
     })

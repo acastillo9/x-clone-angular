@@ -9,19 +9,23 @@ const PASSWORD = '123456';
 })
 export class AuthService {
 
-  isLoggedIn: boolean = JSON.parse(localStorage.getItem('isLoggedIn') ?? 'false');
+  userId: number = JSON.parse(localStorage.getItem('userId') ?? '0');
 
   constructor() { }
 
   login(username: string, password: string) {
-    return new Observable<boolean>((subscriber) => {
-      subscriber.next(username === USERNAME && password === PASSWORD);
+    return new Observable<number>((subscriber) => {
+      subscriber.next(1);
       subscriber.complete();
     });
   }
 
   logout() {
-    this.isLoggedIn = false;
+    this.userId = 0;
     localStorage.clear();
+  }
+
+  isLoggedIn() {
+    return !!this.userId;
   }
 }

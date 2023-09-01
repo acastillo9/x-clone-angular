@@ -1,9 +1,10 @@
 <header class="pl-2 lg:pr-5 sm-pr-2 lg:w-80">
     <a class="font-montserrat text-white text-3xl font-black py-3 px-5 inline-block hover:bg-white/10 rounded-full mb-4 mt-4" href="/">X</a>
     <app-menu />
-    <button class="text-xl font-bold py-4 px-5 cursor-pointer rounded-full bg-blue-x hover:bg-blue-x-2 lg:w-full lg:max-w-xs">
+    <button class="text-xl font-bold py-4 px-5 cursor-pointer rounded-full bg-blue-x hover:bg-blue-x-2 lg:w-full lg:max-w-xs mb-10">
         <fa-icon class="lg:hidden" [icon]="faFeather"></fa-icon>
         <span class="hidden lg:inline">Post</span>
     </button>
+    <app-profile-widget [user]="user" />
     <button (click)="logout()">Log Out</button>
 </header>

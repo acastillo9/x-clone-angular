@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -15,6 +16,7 @@ import { LoginComponent } from './login/login.component';
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
+    FontAwesomeModule
   ]
 })
 export class UsersModule { }
