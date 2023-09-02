@@ -40,7 +40,8 @@
                 <input type="date" class="text-black mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="dateBirth" id="dateBirth" formControlName="dateBirth">
             </label>
 
-            <button class="mt-4 text-xl font-bold py-4 px-5 cursor-pointer rounded-full bg-blue-x hover:bg-blue-x-2 w-full disabled:cursor-not-allowed disabled:bg-gray-500" type="submit" [disabled]="registerForm.invalid">Sign Up</button>
+            <button class="mt-4 text-xl font-bold py-4 px-5 cursor-pointer rounded-full bg-blue-x hover:bg-blue-x-2 w-full disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-blue-x" type="submit" [disabled]="registerForm.invalid">Sign Up</button>
+            <a class="text-center hover:underline" routerLink="/login">Log In</a>
         </form>
     </section>
 </div>

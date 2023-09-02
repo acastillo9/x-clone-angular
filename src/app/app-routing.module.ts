@@ -6,7 +6,10 @@ import { LoginComponent } from './users/login/login.component';
 const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
-  { path: '', redirectTo: 'timeline', pathMatch: 'full' }
+  { 
+    path: '',
+    loadChildren: () => import('./main/main.module').then(m => m.MainModule)
+  }
 ];
 
 @NgModule({

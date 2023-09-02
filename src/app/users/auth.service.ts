@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { User } from './user.model';
 
 const USERNAME = 'admin';
 const PASSWORD = '123456';
@@ -10,6 +11,7 @@ const PASSWORD = '123456';
 export class AuthService {
 
   userId: number = JSON.parse(localStorage.getItem('userId') ?? '0');
+  loggedUserSubject: BehaviorSubject<User | undefined> = new BehaviorSubject<User | undefined>(undefined);
 
   constructor() { }
 
@@ -22,6 +24,7 @@ export class AuthService {
 
   logout() {
     this.userId = 0;
+    this.loggedUserSubject.next(undefined);
     localStorage.clear();
   }
 

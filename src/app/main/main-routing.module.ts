@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TimelineComponent } from '../timeline/timeline.component';
 import { authGuard } from '../users/auth.guard';
-import { SearchComponent } from '../search/search.component';
 import { MainComponent } from './main.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent, canActivateChild: [authGuard], 
     children: [
-      { path: 'timeline', component: TimelineComponent },
-      { path: 'search', component: SearchComponent },
+      { 
+        path: 'timeline',
+        loadChildren: () => import('../timeline/timeline.module').then((m) => m.TimelineModule),
+      },
+      {
+        path: 'search', 
+        loadChildren: () => import('../search/search.module').then((m) => m.SearchModule)
+      },
       { path: '', redirectTo: 'timeline', pathMatch: 'full' }
     ]
   },
