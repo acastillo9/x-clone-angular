@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Tweet } from './tweet.model';
 import { TweetsService } from './tweets.service';
 
@@ -7,8 +7,9 @@ import { TweetsService } from './tweets.service';
   templateUrl: './tweets.component.html',
   styleUrls: ['./tweets.component.scss']
 })
-export class TweetsComponent {
+export class TweetsComponent implements OnInit {
   tweets: Tweet[] = [];
+  isNewTweet = false;
 
   constructor(private tweetsService: TweetsService) {
     // tweetsService.getTweets()
@@ -19,8 +20,10 @@ export class TweetsComponent {
     //   }).finally(() => {
     //     console.log('Termina la promesa');
     //   });
+  }
 
-    tweetsService.getTweets().subscribe({
+  ngOnInit() {
+    this.tweetsService.getTweets().subscribe({
       next: (tweets) => {
         this.tweets = tweets;
       },
@@ -30,6 +33,11 @@ export class TweetsComponent {
       complete: () => {
         console.log('Termina el observable');
       }
+    });
+
+    this.tweetsService.newTweetSubject.subscribe((newTweet) => {
+      this.tweets = [newTweet, ...this.tweets];
+      this.isNewTweet = true;
     });
   }
 }

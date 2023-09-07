@@ -1,3 +1,11 @@
-<div>
-    <img [src]="(userObservable | async)?.profileImage" [alt]="(userObservable | async)?.name">
+<div class="p-4 border-b-white/20 border-solid border-b mb-4 flex gap-4">
+    <div>
+        <img class="w-10 rounded-full" [src]="(userObservable | async)?.profileImage" [alt]="(userObservable | async)?.name">
+    </div>
+    <div class="flex flex-col w-full">
+        <input class="text-white bg-transparent border-none focus:ring-0 focus:ring-offset-0 text-lg" type="text" name="tweetText" id="tweetText" placeholder="What is happening?!" [(ngModel)]="tweetText">
+        <div class="flex justify-end">
+            <button class="text-base font-bold py-2 px-5 cursor-pointer rounded-full bg-blue-x hover:bg-blue-x-2 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-blue-x" [disabled]="!tweetText" (click)="saveTweet()">Post</button>
+        </div>
+    </div>
 </div>

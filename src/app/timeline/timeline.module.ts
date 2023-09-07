@@ -10,6 +10,7 @@ import { TweetComponent } from './tweets/tweet/tweet.component';
 import { TweetsComponent } from './tweets/tweets.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CreateTweetComponent } from './create-tweet/create-tweet.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { CreateTweetComponent } from './create-tweet/create-tweet.component';
   imports: [
     CommonModule,
     TimelineRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
   ]
 })
 export class TimelineModule { }

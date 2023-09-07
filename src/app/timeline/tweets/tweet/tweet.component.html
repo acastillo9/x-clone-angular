@@ -1,8 +1,8 @@
-<article class="flex py-3 px-4 cursor-pointer border-b border-solid border-white/30 gap-4">
+<article class="flex py-3 px-4 cursor-pointer border-b border-solid border-white/30 gap-4 tweet" [@itemAnimation] [@.disabled]="!isNew">
     <div>
         <img class="rounded-full max-w-none" [src]="tweet?.user?.profileImage" [alt]="tweet?.user?.name" width="40">
     </div>
-    <div>
+    <div class="w-full">
         <div class="mb-2">
             <a class="font-bold mr-2 hover:underline" href="#">{{ tweet?.user?.name }}</a><span class="text-gray-x"><span>{{ tweet?.user?.username }}</span> · <a class="text-gray-x hover:underline" href="#">{{ tweet?.date | date }}</a></span>
         </div>

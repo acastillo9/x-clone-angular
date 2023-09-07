@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Tweet } from './tweet.model';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { TweetSave } from './types';
 
 const TWEETS = [
   {
@@ -59,6 +60,8 @@ const TWEETS = [
 })
 export class TweetsService {
 
+  newTweetSubject: Subject<Tweet> = new Subject();
+
   constructor(private httpClient: HttpClient) { }
 
   // getTweets(): Promise<Tweet[]> {
@@ -99,6 +102,10 @@ export class TweetsService {
   // }
 
   getTweets(): Observable<Tweet[]> {
-    return this.httpClient.get<Tweet[]>('http://localhost:3000/tweets');
+    return this.httpClient.get<Tweet[]>('http://localhost:3000/tweets?_expand=user&_sort=date&_order=desc');
+  }
+
+  saveTweet(tweet: TweetSave): Observable<Tweet> {
+    return this.httpClient.post<Tweet>('http://localhost:3000/tweets', tweet);
   }
 }
