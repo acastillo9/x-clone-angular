@@ -17,7 +17,7 @@ import { animate, style, transition, trigger } from '@angular/animations';
 })
 export class TweetComponent {
   @Input()
-  tweet: Tweet | undefined = undefined;
+  tweet: Tweet | null = null;
   
   @Input()
   isNew: boolean = false;

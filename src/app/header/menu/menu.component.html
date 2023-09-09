@@ -1,15 +1,27 @@
 <nav class="mb-8">
     <ul>
         <li class="mb-2">
-            <a class="font-bold text-xl py-4 px-7 inline-flex gap-4 items-center rounded-full hover:bg-white/10 font-fira-sans" routerLink="/">
+            <a class="text-xl py-4 px-7 inline-flex gap-4 items-center rounded-full hover:bg-white/10 font-fira-sans" routerLink="/timeline" routerLinkActive="font-bold">
                 <fa-icon [icon]="faHouse"></fa-icon>
                 <span class="hidden lg:inline">Home</span>
             </a>
         </li>
         <li class="mb-2">
-            <a class="text-xl py-4 px-7 inline-flex gap-4 items-center rounded-full hover:bg-white/10 font-fira-sans" routerLink="/search">
+            <a class="text-xl py-4 px-7 inline-flex gap-4 items-center rounded-full hover:bg-white/10 font-fira-sans" routerLink="/search" routerLinkActive="font-bold">
                 <fa-icon [icon]="faMagnifyingGlass"></fa-icon>
                 <span class="hidden lg:inline">Explore</span>
+            </a>
+        </li>
+        <li class="mb-2">
+            <a class="text-xl py-4 px-7 inline-flex gap-4 items-center rounded-full hover:bg-white/10 font-fira-sans" routerLink="/table" routerLinkActive="font-bold">
+                <fa-icon [icon]="faTable"></fa-icon>
+                <span class="hidden lg:inline">Table</span>
+            </a>
+        </li>
+        <li class="mb-2">
+            <a class="text-xl py-4 px-7 inline-flex gap-4 items-center rounded-full hover:bg-white/10 font-fira-sans" routerLink="/profile" routerLinkActive="font-bold">
+                <fa-icon [icon]="faUser"></fa-icon>
+                <span class="hidden lg:inline">Profile</span>
             </a>
         </li>
     </ul>

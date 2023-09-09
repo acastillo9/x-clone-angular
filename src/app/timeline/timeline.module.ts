@@ -11,6 +11,7 @@ import { TweetsComponent } from './tweets/tweets.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CreateTweetComponent } from './create-tweet/create-tweet.component';
 import { FormsModule } from '@angular/forms';
+import { TweetViewComponent } from './tweet-view/tweet-view.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { FormsModule } from '@angular/forms';
     TweetButtonComponent,
     TweetCounterPipe,
     CreateTweetComponent,
+    TweetViewComponent,
   ],
   imports: [
     CommonModule,

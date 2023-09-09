@@ -1,50 +1,22 @@
 {
   "tweets": [
     {
-      "id": 1,
-      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam illo natus modi facilis vel itaque sequi porro tenetur quidem ipsam commodi, quasi asperiores quibusdam quis mollitia, velit ratione facere assumenda?",
-      "date": "2023-08-23T23:37:32.322Z",
+      "text": "test Tweet updated",
       "userId": 1,
-      "replaysCount": 100,
-      "retweetsCount": 200,
-      "likesCount": 230,
-      "viewsCount": 500
+      "date": "2023-09-08T00:59:48.502Z",
+      "id": 6
     },
     {
-      "id": 2,
-      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id accusantium molestias quas aliquam pariatur officia sequi itaque, consequatur possimus eum ducimus modi necessitatibus maiores doloribus quam maxime molestiae earum animi.",
-      "date": "2023-08-22T20:22:31.322Z",
+      "text": "test tweet 2",
       "userId": 2,
-      "replaysCount": 100,
-      "retweetsCount": 200,
-      "likesCount": 450,
-      "viewsCount": 100
+      "date": "2023-09-08T23:20:13.644Z",
+      "id": 7
     },
     {
-      "id": 3,
-      "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam provident ipsam nostrum praesentium harum odit nam placeat, consequatur itaque, rem quas similique perspiciatis! Provident minima dignissimos nostrum repellendus a error.",
-      "date": "2023-07-12T10:35:20.322Z",
+      "text": "test Tweet updated",
       "userId": 1,
-      "replaysCount": 500,
-      "retweetsCount": 300,
-      "likesCount": 130,
-      "viewsCount": 400
-    },
-    {
-      "id": 4,
-      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam voluptate id doloribus soluta numquam quos modi temporibus, laudantium commodi voluptatem odio amet exercitationem ipsa aperiam, aliquam assumenda distinctio minima inventore.",
-      "date": "2023-08-25T10:35:20.322Z",
-      "userId": 2,
-      "replaysCount": 25,
-      "retweetsCount": 30,
-      "likesCount": 13,
-      "viewsCount": 50
-    },
-    {
-      "text": "Test Tweet",
-      "userId": 1,
-      "date": "2023-09-07T00:30:44.217Z",
-      "id": 5
+      "date": "2023-09-08T23:23:02.930Z",
+      "id": 8
     }
   ],
   "users": [

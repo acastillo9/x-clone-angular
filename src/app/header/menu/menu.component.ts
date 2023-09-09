@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faHouse, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faMagnifyingGlass, faTable, faUser } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-menu',
@@ -9,4 +9,6 @@ import { faHouse, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 export class MenuComponent {
   faHouse = faHouse;
   faMagnifyingGlass = faMagnifyingGlass;
+  faTable = faTable;
+  faUser = faUser;
 }

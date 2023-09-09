@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Tweet } from './tweet.model';
 import { TweetsService } from './tweets.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-tweets',
   templateUrl: './tweets.component.html',
   styleUrls: ['./tweets.component.scss']
 })
-export class TweetsComponent implements OnInit {
+export class TweetsComponent implements OnInit, OnDestroy {
   tweets: Tweet[] = [];
   isNewTweet = false;
+  tweetsSubscription: Subscription | undefined = undefined;
+  newTweetSubscription: Subscription | undefined = undefined;
 
   constructor(private tweetsService: TweetsService) {
     // tweetsService.getTweets()
@@ -23,7 +26,7 @@ export class TweetsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.tweetsService.getTweets().subscribe({
+    this.tweetsSubscription = this.tweetsService.getTweets().subscribe({
       next: (tweets) => {
         this.tweets = tweets;
       },
@@ -35,9 +38,18 @@ export class TweetsComponent implements OnInit {
       }
     });
 
-    this.tweetsService.newTweetSubject.subscribe((newTweet) => {
+    this.newTweetSubscription = this.tweetsService.newTweetSubject.subscribe((newTweet) => {
       this.tweets = [newTweet, ...this.tweets];
       this.isNewTweet = true;
     });
+  }
+
+  ngOnDestroy(): void {
+    if (this.tweetsSubscription) {
+      this.tweetsSubscription.unsubscribe();
+    }
+    if (this.newTweetSubscription) {
+      this.newTweetSubscription.unsubscribe();
+    }
   }
 }

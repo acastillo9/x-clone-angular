@@ -108,4 +108,16 @@ export class TweetsService {
   saveTweet(tweet: TweetSave): Observable<Tweet> {
     return this.httpClient.post<Tweet>('http://localhost:3000/tweets', tweet);
   }
+
+  updateTweet(id:string, tweet: TweetSave): Observable<Tweet> {
+    return this.httpClient.put<Tweet>(`http://localhost:3000/tweets/${id}`, tweet);
+  }
+
+  getTweet(id: string): Observable<Tweet> {
+    return this.httpClient.get<Tweet>(`http://localhost:3000/tweets/${id}?_expand=user`);
+  }
+
+  deleteTweet(id:string): Observable<void> {
+    return this.httpClient.delete<void>(`http://localhost:3000/tweets/${id}`);
+  }
 }
