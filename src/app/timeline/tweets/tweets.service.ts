@@ -4,6 +4,8 @@ import { Observable, Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { TweetSave } from './types';
 
+const TWEETS_PATH = 'tweets';
+
 const TWEETS = [
   {
     id: '1',
@@ -102,22 +104,22 @@ export class TweetsService {
   // }
 
   getTweets(): Observable<Tweet[]> {
-    return this.httpClient.get<Tweet[]>('http://localhost:3000/tweets?_expand=user&_sort=date&_order=desc');
+    return this.httpClient.get<Tweet[]>(`${TWEETS_PATH}?_expand=user&_sort=date&_order=desc`);
   }
 
   saveTweet(tweet: TweetSave): Observable<Tweet> {
-    return this.httpClient.post<Tweet>('http://localhost:3000/tweets', tweet);
+    return this.httpClient.post<Tweet>(TWEETS_PATH, tweet);
   }
 
   updateTweet(id:string, tweet: TweetSave): Observable<Tweet> {
-    return this.httpClient.put<Tweet>(`http://localhost:3000/tweets/${id}`, tweet);
+    return this.httpClient.put<Tweet>(`${TWEETS_PATH}/${id}`, tweet);
   }
 
   getTweet(id: string): Observable<Tweet> {
-    return this.httpClient.get<Tweet>(`http://localhost:3000/tweets/${id}?_expand=user`);
+    return this.httpClient.get<Tweet>(`${TWEETS_PATH}/${id}?_expand=user`);
   }
 
   deleteTweet(id:string): Observable<void> {
-    return this.httpClient.delete<void>(`http://localhost:3000/tweets/${id}`);
+    return this.httpClient.delete<void>(`${TWEETS_PATH}/${id}`);
   }
 }
