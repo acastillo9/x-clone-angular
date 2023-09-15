@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TweetsService } from '../tweets/tweets.service';
 import { Observable } from 'rxjs';
@@ -10,6 +10,7 @@ import { Tweet } from '../tweets/tweet.model';
   styleUrls: ['./tweet-view.component.scss']
 })
 export class TweetViewComponent implements OnInit {
+
   tweet$: Observable<Tweet> | undefined = undefined;
 
   constructor(private activatedRoute: ActivatedRoute, private tweetsService: TweetsService) {}

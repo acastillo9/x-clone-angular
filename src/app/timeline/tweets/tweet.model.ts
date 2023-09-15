@@ -1,7 +1,7 @@
 import { User } from "../../users/user.model";
 
 export interface Tweet {
-    id: string;
+    id: number;
     text: string;
     date: Date;
     user: User;
@@ -9,4 +9,5 @@ export interface Tweet {
     retweetsCount: number;
     likesCount: number;
     viewsCount: number;
+    tweetId?: number | null;
 }

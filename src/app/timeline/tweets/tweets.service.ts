@@ -107,19 +107,27 @@ export class TweetsService {
     return this.httpClient.get<Tweet[]>(`${TWEETS_PATH}?_expand=user&_sort=date&_order=desc`);
   }
 
+  getTweetsByUserId(userId: number) {
+    return this.httpClient.get<Tweet[]>(`${TWEETS_PATH}?userId=${userId}&_expand=user&_sort=date&_order=desc`);
+  }
+
+  getReplies(tweetId: number) {
+    return this.httpClient.get<Tweet[]>(`${TWEETS_PATH}?tweetId=${tweetId}&_expand=user&_sort=date&_order=desc`);
+  }
+
   saveTweet(tweet: TweetSave): Observable<Tweet> {
     return this.httpClient.post<Tweet>(TWEETS_PATH, tweet);
   }
 
-  updateTweet(id:string, tweet: TweetSave): Observable<Tweet> {
+  updateTweet(id: number, tweet: TweetSave): Observable<Tweet> {
     return this.httpClient.put<Tweet>(`${TWEETS_PATH}/${id}`, tweet);
   }
 
-  getTweet(id: string): Observable<Tweet> {
+  getTweet(id: number): Observable<Tweet> {
     return this.httpClient.get<Tweet>(`${TWEETS_PATH}/${id}?_expand=user`);
   }
 
-  deleteTweet(id:string): Observable<void> {
+  deleteTweet(id: number): Observable<void> {
     return this.httpClient.delete<void>(`${TWEETS_PATH}/${id}`);
   }
 }

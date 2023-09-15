@@ -21,4 +21,7 @@ export class TweetComponent {
   
   @Input()
   isNew: boolean = false;
+
+  @Input()
+  disableRouting: boolean = false;
 }

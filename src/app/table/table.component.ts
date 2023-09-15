@@ -57,7 +57,8 @@ export class TableComponent implements OnInit {
         this.tweetsObservable = this.tweetsService.getTweets();
       })
     } else {
-      this.tweetsService.updateTweet(this.tweetForm.get('id')!.value!, newTweet).subscribe(() => {
+      const value = Number(this.tweetForm.get('id')!.value!)
+      this.tweetsService.updateTweet(value, newTweet).subscribe(() => {
         console.log('tweet guardado');
         this.tweetForm.reset();
         this.tweetsObservable = this.tweetsService.getTweets();
@@ -65,16 +66,16 @@ export class TableComponent implements OnInit {
     }
   }
 
-  editTweet(id: string) {
+  editTweet(id: number) {
     this.tweetsService.getTweet(id).subscribe((tweet) => {
-      this.tweetForm.get('id')?.setValue(tweet.id);
+      this.tweetForm.get('id')?.setValue(String(tweet.id));
       this.tweetForm.get('text')?.setValue(tweet.text);
       this.tweetForm.get('userId')?.setValue(String(tweet.user.id));
       this.openModal();
     });
   }
 
-  deleteTweet(id: string) {
+  deleteTweet(id: number) {
     this.tweetsService.deleteTweet(id).subscribe(() => {
       console.log('Tweet eliminado');
       this.tweetsObservable = this.tweetsService.getTweets();

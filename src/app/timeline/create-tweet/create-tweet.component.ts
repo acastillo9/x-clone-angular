@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AuthService } from 'src/app/users/auth.service';
 import { User } from 'src/app/users/user.model';
 import { TweetsService } from '../tweets/tweets.service';
-import { Tweet } from '../tweets/tweet.model';
 import { TweetSave } from '../tweets/types';
 
 @Component({
@@ -12,6 +11,15 @@ import { TweetSave } from '../tweets/types';
   styleUrls: ['./create-tweet.component.scss']
 })
 export class CreateTweetComponent implements OnInit {
+
+  @Input()
+  tweetId: number | null | undefined;
+
+  @Input()
+  placeholder: string = '';
+
+  @Input()
+  buttonText: string = '';
 
   profileImage: string | undefined = undefined;
   username: string | undefined = '';
@@ -30,6 +38,7 @@ export class CreateTweetComponent implements OnInit {
         text: this.tweetText,
         userId: this.authService.userId,
         date: new Date(), // Deberia ser responsabilidad del backend poner esta fecha
+        tweetId: this.tweetId,
       }
       this.tweetService.saveTweet(tweet).subscribe((savedTweet) => {
         console.log('Tweet guardado', savedTweet);

@@ -1,1 +1,9 @@
-<p>profile works!</p>
+<section class="p-4 border-b-white/20 border-solid border-b mb-4">
+    <img class="w-20 rounded-full border border-black border-solid mb-4" [src]="(user$ | async)?.profileImage" [alt]="(user$ | async)?.name">
+    <p class="text-2xl font-bold">{{ (user$ | async)?.name }}</p>
+    <span class="text-white/20">@{{ (user$ | async)?.username }}</span>
+</section>
+
+<section *ngIf="(user$ | async) as tweet">
+    <app-tweets [userId]="tweet.id"></app-tweets>
+</section>

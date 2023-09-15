@@ -30,6 +30,9 @@ import { TweetViewComponent } from './tweet-view/tweet-view.component';
     TimelineRoutingModule,
     FontAwesomeModule,
     FormsModule
+  ],
+  exports: [
+    TweetsComponent
   ]
 })
 export class TimelineModule { }

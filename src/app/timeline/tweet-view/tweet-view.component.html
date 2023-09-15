@@ -1,1 +1,5 @@
-<app-tweet [tweet]="tweet$ | async"></app-tweet>
+<app-tweet [tweet]="tweet$ | async" [disableRouting]="true"></app-tweet>
+<ng-container *ngIf="(tweet$ | async) as tweet">
+    <app-create-tweet placeholder="Post your reply" buttonText="Reply" [tweetId]="tweet.id"></app-create-tweet>
+    <app-tweets [tweetId]="tweet.id"></app-tweets>
+</ng-container>
