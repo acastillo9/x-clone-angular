@@ -24,4 +24,8 @@ export class TweetComponent {
 
   @Input()
   disableRouting: boolean = false;
+
+  addLike() {
+    this.tweet!.likesCount += 1;
+  }
 }

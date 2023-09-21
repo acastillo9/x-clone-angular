@@ -104,11 +104,11 @@ export class TweetsService {
   // }
 
   getTweets(): Observable<Tweet[]> {
-    return this.httpClient.get<Tweet[]>(`${TWEETS_PATH}?_expand=user&_sort=date&_order=desc`);
+    return this.httpClient.get<Tweet[]>(`${TWEETS_PATH}?tweetId=0&_expand=user&_sort=date&_order=desc`);
   }
 
   getTweetsByUserId(userId: number) {
-    return this.httpClient.get<Tweet[]>(`${TWEETS_PATH}?userId=${userId}&_expand=user&_sort=date&_order=desc`);
+    return this.httpClient.get<Tweet[]>(`${TWEETS_PATH}?userId=${userId}&tweetId_ne=0&_expand=user&_sort=date&_order=desc`);
   }
 
   getReplies(tweetId: number) {

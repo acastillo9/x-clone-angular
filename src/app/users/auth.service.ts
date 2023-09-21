@@ -2,6 +2,19 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { User } from './user.model';
 
+const USERS = [
+  {
+    id: 1,
+    username: 'admin',
+    password: '123456' 
+  },
+  {
+    id: 2,
+    username: 'admin2',
+    password: '1234567' 
+  },
+]
+
 const USERNAME = 'admin';
 const PASSWORD = '123456';
 
@@ -16,8 +29,14 @@ export class AuthService {
   constructor() { }
 
   login(username: string, password: string) {
+    const loggedUser = USERS.find((user) => user.password === password && user.username === username);
+
     return new Observable<number>((subscriber) => {
-      subscriber.next(1);
+      if (loggedUser) {
+        subscriber.next(loggedUser.id);
+      } else {
+        subscriber.error(new Error('Username or password incorrect'))
+      }
       subscriber.complete();
     });
   }

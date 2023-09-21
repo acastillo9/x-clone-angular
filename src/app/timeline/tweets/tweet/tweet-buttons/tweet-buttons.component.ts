@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { faComment } from '@fortawesome/free-regular-svg-icons';
 import { faChartSimple, faArrowUpFromBracket, faRetweet, faHeart } from '@fortawesome/free-solid-svg-icons';
 
@@ -8,6 +8,9 @@ import { faChartSimple, faArrowUpFromBracket, faRetweet, faHeart } from '@fortaw
   styleUrls: ['./tweet-buttons.component.scss']
 })
 export class TweetButtonsComponent {
+
+  @Input()
+  tweetId: number | undefined;
 
   @Input()
   replays: number = 0;
@@ -21,9 +24,17 @@ export class TweetButtonsComponent {
   @Input()
   views: number = 0;
 
+  @Output()
+  addLike: EventEmitter<void> = new EventEmitter();
+
   faComment = faComment;
   faChartSimple = faChartSimple;
   faArrowUpFromBracket = faArrowUpFromBracket;
   faRetweet = faRetweet;
   faHeart = faHeart;
+
+  likeClicked($event: MouseEvent) {
+    $event.stopPropagation();
+    this.addLike.emit();
+  }
 }

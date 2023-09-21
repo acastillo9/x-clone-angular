@@ -1,7 +1,7 @@
 <div class="flex justify-between">
-    <app-tweet-button [icon]="faComment" [value]="replays | tweetCounter" />
+    <app-tweet-button [icon]="faComment" [value]="replays | tweetCounter" [routerLink]="['/timeline/tweet', tweetId]" />
     <app-tweet-button [icon]="faRetweet" [value]="retweets | tweetCounter" color="green" />
-    <app-tweet-button [icon]="faHeart" [value]="likes | tweetCounter" color="red" />
+    <app-tweet-button [icon]="faHeart" [value]="likes | tweetCounter" color="red" (click)="likeClicked($event)" />
     <app-tweet-button [icon]="faChartSimple" [value]="views | tweetCounter" />
     <app-tweet-button [icon]="faArrowUpFromBracket" />
 </div>

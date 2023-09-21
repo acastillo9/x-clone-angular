@@ -38,7 +38,11 @@ export class CreateTweetComponent implements OnInit {
         text: this.tweetText,
         userId: this.authService.userId,
         date: new Date(), // Deberia ser responsabilidad del backend poner esta fecha
-        tweetId: this.tweetId,
+        tweetId: this.tweetId || 0, // Solo porque json server no tiene como consultar por valores undefined
+        replaysCount: 0,
+        retweetsCount: 0,
+        likesCount: 0,
+        viewsCount: 0,
       }
       this.tweetService.saveTweet(tweet).subscribe((savedTweet) => {
         console.log('Tweet guardado', savedTweet);

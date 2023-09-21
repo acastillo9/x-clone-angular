@@ -1,67 +1,15 @@
 {
   "tweets": [
     {
-      "text": "test Tweet updated",
+      "text": "hola, este es mi primer tweet",
       "userId": 1,
-      "date": "2023-09-08T00:59:48.502Z",
-      "id": 6,
-      "tweetId": null
-    },
-    {
-      "text": "test tweet 2",
-      "userId": 2,
-      "date": "2023-09-08T23:20:13.644Z",
-      "id": 7,
-      "tweetId": null
-    },
-    {
-      "text": "test Tweet updated",
-      "userId": 1,
-      "date": "2023-09-08T23:23:02.930Z",
-      "id": 8,
-      "tweetId": null
-    },
-    {
-      "text": "asdad",
-      "userId": 1,
-      "date": "2023-09-14T23:24:18.736Z",
-      "id": 9,
-      "tweetId": null
-    },
-    {
-      "text": "hola",
-      "userId": 1,
-      "date": "2023-09-15T00:47:50.241Z",
-      "id": 10,
-      "tweetId": null
-    },
-    {
-      "text": "test",
-      "userId": 1,
-      "date": "2023-09-15T00:49:01.371Z",
-      "tweetId": null,
-      "id": 11
-    },
-    {
-      "text": "bien",
-      "userId": 1,
-      "date": "2023-09-15T00:51:56.822Z",
-      "tweetId": 10,
-      "id": 12
-    },
-    {
-      "text": "otro tweet",
-      "userId": 1,
-      "date": "2023-09-15T00:52:24.173Z",
-      "tweetId": 10,
-      "id": 13
-    },
-    {
-      "text": "ok",
-      "userId": 1,
-      "date": "2023-09-15T01:01:54.527Z",
-      "tweetId": 12,
-      "id": 14
+      "date": "2023-09-20T23:59:54.727Z",
+      "tweetId": 0,
+      "replaysCount": 0,
+      "retweetsCount": 0,
+      "likesCount": 0,
+      "viewsCount": 0,
+      "id": 1
     }
   ],
   "users": [
