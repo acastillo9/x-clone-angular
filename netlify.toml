@@ -1,0 +1,8 @@
+[build]
+  command="ng build"
+  publish="dist/x-clone-angular"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
